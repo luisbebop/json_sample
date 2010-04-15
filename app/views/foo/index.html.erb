@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<script type="application/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="application/javascript">
+			google.load("jquery", "1.3.2");
+		</script>
+	</head>
+	<body>
+		<script language="javascript">
+			$(document).ready(function(){
+				$.getJSON("/foo/count?callback=?", function(data){
+					alert(data.count);
+				});
+			});
+		</script>
+	</body>
+</html>
